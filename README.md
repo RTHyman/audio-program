@@ -1,7 +1,19 @@
-# a3V + 5V + udio-emotion-toy
-A simple audio program for Raspberry Pi that will play sounds from different folders depending on the button you press
+# audio emotion toy
 
+A simple audio program for Raspberry Pi that will play random sounds from different folders depending on the button you press
 
+# project goal
+
+The initial goal of the project is to provide a simple project that will teach basics of enclosures, LEDs and buttons, soldering, python, and raspberry pi. \
+The goal of the project itself beyond education is to create a 'noisemaker' which will have 4 different folders with different categories of sound files (wav, mp3, etc) \
+In the current design, the setup is to have each color correspond to a different emotion: 
+
+GREEN = FEAR \
+RED = ANGRY \ 
+YELLOW = HAPPY \ 
+BLUE = SAD \ 
+
+This could then be used to spend time with children or anyone else who has challenges processing emotion and trying out the different sounds, and discussing if you think they correspond to the emotion label, and why or why not. I also think its a fun concept! Future stretch goals may include attempts to use machine learning and/or large datasets to provide more audio clips beyond the samples I'm providing here. \ 
 
 # parts list 
 
@@ -16,6 +28,12 @@ I purchased all parts from Adafruit. You could also find cheaper vendors for the
 [16mm Illuminated Pushbutton - Blue Momentary](https://www.adafruit.com/product/1477) \ 
 [Double-Side Prototype PCB Board](https://www.amazon.com/Double-Side-Prototype-Universal-Printed-Circuit/dp/B012YZ2Q3W?th=1) - not required but adds convenience \ 
 
+You will also need
+ - Soldering gun
+ - Solder
+ - Wiring
+ - Watercolour paper or other thick stock paper that will provide some durability. Printer paper will not be thick enough for this project. Feel free to get creative in making your enclosure!
+
 # overview of parts
 
 this guide assumes you already have a raspberry pi zero with raspbian setup and male headers attached - the speaker bonnet uses female headers 
@@ -24,12 +42,16 @@ this guide assumes you already have a raspberry pi zero with raspbian setup and 
  - note that pins 18, 19, and 21 of the pi are used by the sound bonnet, you cannot use them for any other purpose
  - 3V and 5V and GND at the 'top' of the GPIO are also used by the bonnet
 
+# setup
+
 
 
 # watercolour paper enclosure
 
 Box is made using origami video: https://www.youtube.com/watch?time_continue=6&v=R6TUvYCrdvM
 
-<img src="images/enclosure/enclosure_layout_unpainted.jpg" alt="hi" class="inline"/>
-
 ![enclosure_layout_unpainted!](/images/enclosure/enclosure_layout_unpainted.jpg)
+
+# putting it into the enclosure
+
+This is what 
