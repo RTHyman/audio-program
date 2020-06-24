@@ -4,16 +4,19 @@ A simple audio program for Raspberry Pi that will play random sounds from differ
 
 # project goal
 
-The initial goal of the project is to provide a simple project that will teach basics of enclosures, LEDs and buttons, soldering, python, and raspberry pi. \
-The goal of the project itself beyond education is to create a 'noisemaker' which will have 4 different folders with different categories of sound files (wav, mp3, etc) \
+The initial goal of the project is to provide a simple project that will teach basics of enclosures, LEDs and buttons, soldering, python, and raspberry pi.  
+The goal of the project itself beyond education is to create a 'noisemaker' which will have 4 different folders with different categories of sound files (wav, mp3, etc)  
+
 In the current design, the setup is to have each color correspond to a different emotion: 
 
-GREEN = FEAR \
-RED = ANGRY \ 
-YELLOW = HAPPY \ 
-BLUE = SAD \ 
+GREEN = FEAR  
+RED = ANGRY  
+YELLOW = HAPPY   
+BLUE = SAD   
 
-This could then be used to spend time with children or anyone else who has challenges processing emotion and trying out the different sounds, and discussing if you think they correspond to the emotion label, and why or why not. I also think its a fun concept! Future stretch goals may include attempts to use machine learning and/or large datasets to provide more audio clips beyond the samples I'm providing here. \ 
+This could then be used to spend time with children or anyone else who has challenges processing emotion and trying out the different sounds, and discussing if you think they correspond to the emotion label, and why or why not.  
+
+I also think its a fun concept! Future stretch goals may include attempts to use machine learning and/or large datasets to provide more audio clips beyond the samples I'm providing here. \ 
 
 # parts list 
 
