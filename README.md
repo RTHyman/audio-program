@@ -2,7 +2,7 @@
 
 A guide to create an enclosure for a simple python audio program for Raspberry Pi Zero that will play random sounds from different folders depending on the button you press
 
-![enclosure_layout_unpainted!](/images/enclosure/enclosure_finished.jpg)
+![enclosure_finished!](/images/enclosure/enclosure_finished.jpg)
 
 # project goal
 
