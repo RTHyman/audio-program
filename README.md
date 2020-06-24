@@ -24,19 +24,20 @@ I also think its a fun concept! Future stretch goals may include attempts to use
 
 I purchased all parts from Adafruit. You could also find cheaper vendors for the same. I reccomend Adafruit especially for people in the early stages of learning, due to better documentation, reliability of parts, and fast shipping in the US. Howver you can save a lot of money using other vendors such as Mouserr or Aliexpress.
 
-[Raspberry Pi Zero W](https://www.adafruit.com/product/3400?gclid=CjwKCAiA7ovTBRAQEiwAo8dPcT7r_diZ0nh_mxDEbGtFlZWElk7pgPRVqEoXtqhEhSXQYM8Y6hEbBBoCS2YQAvD_BwE) \
-[Adafruit I2S 3W Stereo Speaker Bonnet for Raspberry Pi - Mini Kit](https://www.adafruit.com/product/3346) \
+[Raspberry Pi Zero W](https://www.adafruit.com/product/3400?gclid=CjwKCAiA7ovTBRAQEiwAo8dPcT7r_diZ0nh_mxDEbGtFlZWElk7pgPRVqEoXtqhEhSXQYM8Y6hEbBBoCS2YQAvD_BwE)  
+[Adafruit I2S 3W Stereo Speaker Bonnet for Raspberry Pi - Mini Kit](https://www.adafruit.com/product/3346)  
+[Stereo Enclosed Speaker Set - 3W 4 Ohm](https://www.adafruit.com/product/1669) - we will only be using one of the 2 included speakers
 
-[16mm Illuminated Pushbutton - Yellow Momentary](https://www.adafruit.com/product/1441) \
-[16mm Illuminated Pushbutton - Red Momentary](https://www.adafruit.com/product/1439) \ 
-[16mm Illuminated Pushbutton - Green Momentary](https://www.adafruit.com/product/1440) \ 
-[16mm Illuminated Pushbutton - Blue Momentary](https://www.adafruit.com/product/1477) \ 
-[Double-Side Prototype PCB Board](https://www.amazon.com/Double-Side-Prototype-Universal-Printed-Circuit/dp/B012YZ2Q3W?th=1) - not required but adds convenience \ 
+[16mm Illuminated Pushbutton - Yellow Momentary](https://www.adafruit.com/product/1441)  
+[16mm Illuminated Pushbutton - Red Momentary](https://www.adafruit.com/product/1439)  
+[16mm Illuminated Pushbutton - Green Momentary](https://www.adafruit.com/product/1440)   
+[16mm Illuminated Pushbutton - Blue Momentary](https://www.adafruit.com/product/1477)  
+[Double-Side Prototype PCB Board](https://www.amazon.com/Double-Side-Prototype-Universal-Printed-Circuit/dp/B012YZ2Q3W?th=1) - not required but adds convenience  
 
 You will also need
- - Soldering gun
- - Solder
- - Wiring
+ - Soldering gun - for example [Weller WLC100 40-Watt Soldering Station](https://www.amazon.com/Weller-WLC100-40-Watt-Soldering-Station/dp/B000AS28UC)
+ - Solder - for example [Mini Solder spool](https://www.adafruit.com/product/145)
+ - Wiring - for example [Stranded-Core Wire Spool - 25ft - 22AWG - Red](https://www.adafruit.com/product/3068)
  - Watercolour paper or other thick stock paper that will provide some durability. Printer paper will not be thick enough for this project. Feel free to get creative in making your enclosure!
 
 # overview of parts
@@ -53,7 +54,7 @@ this guide assumes you already have a raspberry pi zero with raspbian setup and 
 
 # watercolour paper enclosure
 
-The box enclosure is made using origami video: https://www.youtube.com/watch?time_continue=6&v=R6TUvYCrdvM  
+The box enclosure is made using [this origami video](https://youtu.be/R6TUvYCrdvM) watch this for the step by step box creation instructions
 See the below reference image for watercolour paper size that I used, and dimenstions  
 
  - note the cutout is marked as I neglected to make it big enough when I was originally making this
