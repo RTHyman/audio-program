@@ -1,6 +1,8 @@
 # audio emotion toy
 
-A simple audio program for Raspberry Pi that will play random sounds from different folders depending on the button you press
+A guide to create an enclosure for a simple python audio program for Raspberry Pi Zero that will play random sounds from different folders depending on the button you press
+
+![enclosure_layout_unpainted!](/images/enclosure/enclosure_finished.jpg)
 
 # project goal
 
@@ -51,9 +53,15 @@ this guide assumes you already have a raspberry pi zero with raspbian setup and 
 
 # watercolour paper enclosure
 
-Box is made using origami video: https://www.youtube.com/watch?time_continue=6&v=R6TUvYCrdvM
+The box enclosure is made using origami video: https://www.youtube.com/watch?time_continue=6&v=R6TUvYCrdvM  
+See the below reference image for watercolour paper size that I used, and dimenstions  
 
-![enclosure_layout_unpainted!](/images/enclosure/enclosure_layout_unpainted.jpg)
+ - note the cutout is marked as I neglected to make it big enough when I was originally making this
+ - you may want to place your raspberry pi over the paper and visually verify the length of the space from the hdmi port to the power/usb ports
+ - if you're unsure of this step you can always go back and do it after you've assembled the box
+
+![enclosure_layout_unpainted!](/images/enclosure/enclosure_layout_unpainted.png)
+
 
 # putting it into the enclosure
 
