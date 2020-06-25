@@ -7,7 +7,7 @@ A guide to create an enclosure for a simple python audio program for Raspberry P
 # project goal
 
 The initial goal of the project is to provide a simple project that will teach basics of enclosures, LEDs and buttons, soldering, python, and raspberry pi.  
-The goal of the project itself beyond education is to create a 'noisemaker' which will have 4 different folders with different categories of sound files (wav, mp3, etc)  
+The goal of the project itself beyond education is to create a small box that will play short sound clips  which will have 4 different folders with different categories of sound files (wav, mp3, etc)  
 
 In the current design, the setup is to have each color correspond to a different emotion: 
 
@@ -16,9 +16,9 @@ RED = ANGRY
 YELLOW = HAPPY   
 BLUE = SAD   
 
-This could then be used to spend time with children or anyone else who has challenges processing emotion and trying out the different sounds, and discussing if you think they correspond to the emotion label, and why or why not.  
+This could then be used to spend time with children or anyone else who has challenges or interest in recognizing emotions and trying out the different sounds, and discussing if you think they correspond to the emotion label, and why or why not.  
 
-I also think its a fun concept! Future stretch goals may include attempts to use machine learning and/or large datasets to provide more audio clips beyond the samples I'm providing here. \ 
+I also think its a fun concept! Future stretch goals may include attempts to use machine learning and/or large datasets to provide more audio clips beyond the samples I'm providing here. 
 
 # parts list 
 
@@ -60,6 +60,9 @@ See the below reference image for watercolour paper size that I used, and dimens
  - note the cutout is marked as I neglected to make it big enough when I was originally making this
  - you may want to place your raspberry pi over the paper and visually verify the length of the space from the hdmi port to the power/usb ports
  - if you're unsure of this step you can always go back and do it after you've assembled the box
+ - the spacing for the buttons (1.75'') from left and right sides is important so that the box can open and close properly, to leave space for other components. The vertical placement of them is not that important.
+ - once you've made all the needed cuts, and drawn out your intended design go ahead and paint the box with acrylics before you fold and glue the box together. I used 4 sections for 4 different colors / emotion categories.
+ - you can use glue sticks and some crazy glue/gorilla glue to get the box to hold per the video above
 
 ![enclosure_layout_unpainted!](/images/enclosure/enclosure_layout_unpainted.png)
 
