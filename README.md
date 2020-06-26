@@ -40,7 +40,7 @@ Watercolour paper or any other thick stock paper that you can fold around the ho
 Optional:
 [Small Alligator Clip Test Lead (set of 12)](https://www.adafruit.com/product/1008) not required but helpful for testing parts 
 [Anker PowerCore 10000 Portable Charger](https://www.amazon.com/gp/product/B0194WDVHI/ref=oh_aui_detailpage_o07_s00?ie=UTF8&psc=1) if you want to make the project portable, otherwise use official RPi power supply 
-
+[Solder wick - 3S 5ft.](https://www.adafruit.com/product/149) not required but super helpful for cleaning up any messy soldering or soldering mistakes
 
 You will also need
  - Soldering gun - for example [Weller WLC100 40-Watt Soldering Station](https://www.amazon.com/Weller-WLC100-40-Watt-Soldering-Station/dp/B000AS28UC)
@@ -148,5 +148,27 @@ Once you have the script in place on your RPi, make the script executable and ru
 ```
 
 If you are not able to get this to work - stop. Re-read relevant documentation. Ensure that you have the wiring done correctly and there is no error thrown when you run the python script. Feel free to submit an issue on the repo for any questions or concerns on these instructions. If this test isn't working, you do not want to proceed to soldering. 
+
+# Assembly 
+
+Ok, now we will put the parts together in the box. This is going to take a fair bit of tinkering. You'll want to go back to the above 'overview of parts' section and see the documentation for the speaker bonnet. You could solder the GPIO pins to the bonnet before you attach it to the Pi or, you could attach it to the Pi first. If you attached the speaker bonnet first, as I did, you'll need to solder on the *underside* of the bonnet. I found this somewhat infuriating but was able to do it with using a decent bit of exposed wire and a lot of patience. If you tried soldering the GPIO connections on the bonnet first before connecting it to the Pi and soldering that, please let me know if you found that easier. 
+
+Either way, just ensure the bonnet will be able to connect and sit as intended. I would not advise attaching the speaker itself until the wiring to the pushbuttons is done. 
+
+General soldering notes
+ - if you are not experienced, would advise you review [Adafruit's Guide To Excellent Soldering](https://learn.adafruit.com/adafruit-guide-excellent-soldering) - maybe you can do better than I did! 
+ - if you make a mess with solder, use the solder wick to clean it up. You can find resources online on how to properly use solder wick. 
+
+Providing a reference shot of the goal and a fritzing diagram. In this minimal version, I am not screwing down or glueing the Pi down to the enclosure. Some notes:
+ - before you begin soldering, do a quick double check to ensure that with the pushbuttons, Pi + bonnet + speaker, in the enclosure, you can still open and close the box. This is to check your tab placement and general space.
+ - remember, you are soldering near paper, not metal. Be careful. Don't let the soldering gun touch the paper. It will burn. Do not let children solder unsupervised.
+ - I would reccomend you focus on relying on your understanding of how the pushbutton works, and the fritzing diagram connections you are making as a guide, rather than trying to copy the image. The wires are a bit hard to see in the image. 
+ - place the buttons through the holes and screw them in with the plastic circular nut *before* you solder.
+ - you will need to do a fair bit of tinkering, ensure that you can lay down the box flat with the lid open and have enough wire length to reach the buttons. Use a bit more wire length rather than not enough
+ - I'd reccomend to solder all the positive leads to the respective GPIO pins, then focus on the ground pins once that looks neat. The ground pins will be easier since we're using protoboard. The ground pins don't need to be arranged in any particular way, the important thing is that they all go to ground on the Pi.
+ - even after its all connected, you'll want to have some wiggle room for the Pi to move around a bit inside the enclosure - remember, you want to be able to connect power and other peripherals to the exposed ports. 
+ 
+![soldering_reference!](/images/enclosure/soldering_reference.jpg)
+
 
 
