@@ -48,14 +48,14 @@ You will also need
  - Wiring - for example [Stranded-Core Wire Spool - 25ft - 22AWG - Red](https://www.adafruit.com/product/3068)
  - Watercolour paper or other thick stock paper that will provide some durability. Printer paper will not be thick enough for this project. Feel free to get creative in making your enclosure!
 
-## overview of parts
+## bonnet notes
 
 this guide assumes you already have a raspberry pi zero with raspbian setup and male headers attached - the speaker bonnet uses female headers 
 
 [learning guide - Adafruit Speaker Bonnet for Raspberry Pi](https://learn.adafruit.com/adafruit-speaker-bonnet-for-raspberry-pi/pinouts)
  - note that pins 18, 19, and 21 of the pi are used by the sound bonnet, you cannot use them for any other purpose
  - 3V and 5V and GND at the 'top' of the GPIO are also used by the bonnet
- - if you are a beginner, I'd follow the guide step by step and get through the testing portion of the pushbutton before you solder this together. If you're experienced and confident in what you're doing, you can go ahead and solder the Bonnet to the Pi Zero
+ - if you are a beginner, I'd follow the guide step by step and get through the testing portion of the pushbutton before you solder this together. If you're experienced and confident in what you're doing, you can skip the testing wiring section
 
 ## watercolour paper enclosure
 
@@ -102,7 +102,7 @@ Let's try testing with just one (for example, green) momentary illuminated pushb
 
 <img src="/images/fritzing/led-button.png" height="500">
 
-Additional referece images show green alligator clip on the positive LED contact and black on the negative -> resistor -> ground, and yellow on going to 25 and blue going to ground. This is using a Raspberry Pi 4 for testing purposes however this is an identical setup to a Raspberry Pi Zero with male headers. 
+Additional reference images show green alligator clip on the positive LED contact and black on the negative -> resistor -> ground, and yellow on going to 25 and blue going to ground. This is using a Raspberry Pi 4 for testing purposes however this is an identical setup to a Raspberry Pi Zero with male headers. 
 
 <img src="/images/test/alligator_clip_test.jpg" height="500">
 
@@ -118,7 +118,7 @@ first you should run this command to ensure you have the needed packages
 # sudo apt-get install python-rpi.gpio python3-rpi.gpio
 ```
 
-You can use this script (in the repository as test.py) to test.
+You can use this script (in the repository as test.py) to test. If you can ssh to your raspberry pi, you can copy/paste the script onto the Pi. Or you can use scp. Or you could access the desktop with HDMI and manually write the script. 
 
 ```
 import time
@@ -149,11 +149,13 @@ Once you have the script in place on your RPi, make the script executable and ru
 
 If you are not able to get this to work - stop. Re-read relevant documentation. Ensure that you have the wiring done correctly and there is no error thrown when you run the python script. Feel free to submit an issue on the repo for any questions or concerns on these instructions. If this test isn't working, you do not want to proceed to soldering. 
 
-# Assembly 
+## Assembly 
 
 Ok, now we will put the parts together in the box. This is going to take a fair bit of tinkering. You'll want to go back to the above 'overview of parts' section and see the documentation for the speaker bonnet. You could solder the GPIO pins to the bonnet before you attach it to the Pi or, you could attach it to the Pi first. If you attached the speaker bonnet first, as I did, you'll need to solder on the *underside* of the bonnet. I found this somewhat infuriating but was able to do it with using a decent bit of exposed wire and a lot of patience. If you tried soldering the GPIO connections on the bonnet first before connecting it to the Pi and soldering that, please let me know if you found that easier. 
 
 Either way, just ensure the bonnet will be able to connect and sit as intended. I would not advise attaching the speaker itself until the wiring to the pushbuttons is done. 
+
+### Soldering Notes
 
 General soldering notes
  - if you are not experienced, would advise you review [Adafruit's Guide To Excellent Soldering](https://learn.adafruit.com/adafruit-guide-excellent-soldering) - maybe you can do better than I did! 
@@ -161,6 +163,7 @@ General soldering notes
 
 Providing a reference shots of the goal and a fritzing diagram. In this minimal version, I am not screwing down or glueing the Pi down to the enclosure. Some notes:
  - before you begin soldering, do a quick double check to ensure that with the pushbuttons, Pi + bonnet + speaker, in the enclosure, you can still open and close the box. This is to check your tab placement and general space.
+ - I used tape and some glue to reinforce the holes for the pushbuttons to ensure that the paper won't tear or bend, this will be much easier to do before soldering if you want to reinforce the holes.
  - remember, you are soldering near paper, not metal. Be careful. Don't let the soldering gun touch the paper. It will burn. Do not let children solder unsupervised.
  - I would reccomend you focus on relying on your understanding of how the pushbutton works, and the fritzing diagram connections you are making as a guide, rather than trying to copy the image. The wires are a bit hard to see in the image. 
  - place the buttons through the holes and screw them in with the plastic circular nut *before* you solder.
@@ -174,4 +177,4 @@ Providing a reference shots of the goal and a fritzing diagram. In this minimal 
 
 ![soldering_reference_2!](/images/enclosure/soldering_reference_2.jpg)
 
-
+### Connection Details & Diagram
