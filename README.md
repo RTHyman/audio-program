@@ -170,7 +170,7 @@ Providing a reference shots of the goal and a fritzing diagram. In this minimal 
  
 ![soldering_reference!](/images/enclosure/soldering_reference.jpg)
  
- - Reference below is just to show that I soldered on the underside of the speaker bonnet and it definitely isn't pretty but its worked solidly and survived for over 2 years! 
+ - Reference below is just to show that I soldered on the underside of the speaker bonnet and it definitely isn't pretty but its worked solidly and survived for over 2 years! This is just to give you an idea of how I did it. Rely on the fritzing/notes below for specifics 
 
 ![soldering_reference_2!](/images/enclosure/soldering_reference_2.jpg)
 
