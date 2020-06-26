@@ -74,6 +74,10 @@ Once you've gotten the box setup and folded and glued together, there's a few mo
 
 ![enclosure_inside_tabs!](/images/enclosure/enclosure_inside_tabs.jpg)
 
+Reference image for after its all painted and glued and the box is closed
+
+![enclosure_painted!](/images/enclosure/enclosure_painted.jpg)
+
 # testing wiring and software
 
 Note: It is generally considered good practice to test your wiring and software *before* you assemble your electronics, typically this involves using a breadboard and the raspberry pi zero with jumper cables. Unfortunately due to the factthat you need to solder to attach the speaker bonnet to the leds/buttons, I'm going to skip complete instructions for brevity and because testing all the parts for this project would add a lot more hassle with soldering. However, I will reccomend that you at least test one of the pushbutton led and button capabilities, to better understand how they work.
