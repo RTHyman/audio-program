@@ -78,15 +78,11 @@ Once you've gotten the box setup and folded and glued together, there's a few mo
  - I also created a 5.5'' tab to help protect the corner where the box opens and closes
  - the photo below is of the box over 2 years after I created it. It definitely looks a bit messy from all the glue and tinkering, however the box has held up well, I've carried it in my backpack, etc.
 
-<img src="/images/enclosure/enclosure_inside_tabs.jpg" height="300">
-
-![enclosure_inside_tabs!](/images/enclosure/enclosure_inside_tabs.jpg)
+<img src="/images/enclosure/enclosure_inside_tabs.jpg" height="500">
 
 Reference image for after its all painted and glued and the box is closed
 
 <img src="/images/enclosure/enclosure_painted.jpg" height="500">
-
-![enclosure_painted!](/images/enclosure/enclosure_painted.jpg)
 
 ## testing wiring and software
 
@@ -108,7 +104,7 @@ Let's try testing with just one (for example, green) momentary illuminated pushb
 
 Additional referece images show green alligator clip on the positive LED contact and black on the negative -> resistor -> ground, and yellow on going to 25 and blue going to ground. This is using a Raspberry Pi 4 for testing purposes however this is an identical setup to a Raspberry Pi Zero with male headers. 
 
-![alligator_clip_test!](/images/test/alligator_clip_test.jpg)
+<img src="/images/test/alligator_clip_test.jpg" height="500">
 
 It works!
 
