@@ -78,9 +78,13 @@ Once you've gotten the box setup and folded and glued together, there's a few mo
  - I also created a 5.5'' tab to help protect the corner where the box opens and closes
  - the photo below is of the box over 2 years after I created it. It definitely looks a bit messy from all the glue and tinkering, however the box has held up well, I've carried it in my backpack, etc.
 
+<img src="/images/enclosure/enclosure_inside_tabs.jpg" height="2268" width="3024">
+
 ![enclosure_inside_tabs!](/images/enclosure/enclosure_inside_tabs.jpg)
 
 Reference image for after its all painted and glued and the box is closed
+
+<img src="/images/enclosure/enclosure_painted.jpg" height="2277" width="3036">
 
 ![enclosure_painted!](/images/enclosure/enclosure_painted.jpg)
 
