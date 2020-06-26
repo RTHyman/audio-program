@@ -95,7 +95,7 @@ For a reference on Raspberry Pi GPIO please see the [official reference here](ht
 Let's try testing with just one (for example, green) momentary illuminated pushbutton. For each pushbutton, there are 2 sets of contacts, one for the led and one for the button. Per the product page linked above 'There are two contacts for the button and two contacts for the LED, one marked + and one -' and the contacts that are not labeled with + or - are for the button parts. I tested this with alligator clips, but I'm sure you could find another way to test this. I'll walk through testing just the green pushbutton, but you could use the same procedure to test all of them, as long as you're using a valid GPIO pin. Keep in mind I'm using the [BCM scheme](https://pinout.xyz/#) and you can double check your specific BCM mapping using the "pinout" command on the Raspberry Pi terminal. Would also reccomend you take a look at the [offiical RPi GPIO documentation for reference](https://www.raspberrypi.org/documentation/usage/gpio/)
 
  - RPi GPIO 5 to + (positive) contact on green momentary pushbutton
- - 220 to 1000 ohm resistor on the - (negative) then connect back to ground pin on RPi
+ - 220 to 1000 ohm resistor on the - (negative) then connect back to ground pin on RPi (I used a 220 ohm resistor)
  - RPi GPIO 25 to one side of the button contacts 
  - RPi ground to the other side of the button contacts 
  - in the diagram, the leads connecting directly to pushbutton are the LED, and the leads going out to the side are for the button part. 
