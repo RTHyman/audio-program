@@ -2,8 +2,8 @@ import time
 import RPi.GPIO as GPIO
 GPIO.setmode(GPIO.BCM)
 
-GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_UP) #GREEN B = FEAR 
-GPIO.setup(5, GPIO.OUT) #GREEN L = FEAR
+GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_UP)  
+GPIO.setup(5, GPIO.OUT) 
 
 try: 
     while True: 
@@ -14,5 +14,5 @@ try:
             time.sleep(0.2)
         else:
             GPIO.output(5, False)
-    except:
-        GPIO.cleanup()
+except:
+    GPIO.cleanup()

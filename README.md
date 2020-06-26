@@ -4,7 +4,7 @@ A guide to create an enclosure for a simple python audio program for Raspberry P
 
 ![enclosure_finished!](/images/enclosure/enclosure_finished.jpg)
 
-# project goal
+## project goal
 
 The initial goal of the project is to provide a simple project that will teach basics of enclosures, LEDs and buttons, soldering, python, and raspberry pi.  The pros of the approach I've taken is that you can create this project using minimal equipment and watercolour paper, not requiring you to do any woodworking or 3d printing for the enclosure. 
 The goal of the project itself beyond education is to create a small box that will play short sound clips  which will have 4 different folders with different categories of sound files (wav, mp3, etc)  
@@ -22,20 +22,25 @@ I also think its a fun concept! Future stretch goals may include:
  - attempts to use machine learning and/or large datasets to provide more audio clips beyond the samples I'm providing here. 
  - 3d printed enclosure for a more sturdy design
 
-# parts list 
+## parts list 
 
 I purchased all parts from Adafruit. You could also find cheaper vendors for the same. I reccomend Adafruit especially for people in the early stages of learning, due to better documentation, reliability of parts, and fast shipping in the US. Howver you can save a lot of money using other vendors such as Mouserr or Aliexpress.
 
 [Raspberry Pi Zero W](https://www.adafruit.com/product/3400?gclid=CjwKCAiA7ovTBRAQEiwAo8dPcT7r_diZ0nh_mxDEbGtFlZWElk7pgPRVqEoXtqhEhSXQYM8Y6hEbBBoCS2YQAvD_BwE)  
 [Adafruit I2S 3W Stereo Speaker Bonnet for Raspberry Pi - Mini Kit](https://www.adafruit.com/product/3346)  
 [Stereo Enclosed Speaker Set - 3W 4 Ohm](https://www.adafruit.com/product/1669) - we will only be using one of the 2 included speakers
+Watercolour paper or any other thick stock paper that you can fold around the house, at least 7.5'' x 13'' size
 
 [16mm Illuminated Pushbutton - Yellow Momentary](https://www.adafruit.com/product/1441)  
 [16mm Illuminated Pushbutton - Red Momentary](https://www.adafruit.com/product/1439)  
 [16mm Illuminated Pushbutton - Green Momentary](https://www.adafruit.com/product/1440)   
 [16mm Illuminated Pushbutton - Blue Momentary](https://www.adafruit.com/product/1477)  
 [Double-Side Prototype PCB Board](https://www.amazon.com/Double-Side-Prototype-Universal-Printed-Circuit/dp/B012YZ2Q3W?th=1)
+
+Optional:
 [Small Alligator Clip Test Lead (set of 12)](https://www.adafruit.com/product/1008) not required but helpful for testing parts 
+[Anker PowerCore 10000 Portable Charger](https://www.amazon.com/gp/product/B0194WDVHI/ref=oh_aui_detailpage_o07_s00?ie=UTF8&psc=1) if you want to make the project portable, otherwise use official RPi power supply 
+
 
 You will also need
  - Soldering gun - for example [Weller WLC100 40-Watt Soldering Station](https://www.amazon.com/Weller-WLC100-40-Watt-Soldering-Station/dp/B000AS28UC)
@@ -43,7 +48,7 @@ You will also need
  - Wiring - for example [Stranded-Core Wire Spool - 25ft - 22AWG - Red](https://www.adafruit.com/product/3068)
  - Watercolour paper or other thick stock paper that will provide some durability. Printer paper will not be thick enough for this project. Feel free to get creative in making your enclosure!
 
-# overview of parts
+## overview of parts
 
 this guide assumes you already have a raspberry pi zero with raspbian setup and male headers attached - the speaker bonnet uses female headers 
 
@@ -51,10 +56,10 @@ this guide assumes you already have a raspberry pi zero with raspbian setup and 
  - note that pins 18, 19, and 21 of the pi are used by the sound bonnet, you cannot use them for any other purpose
  - 3V and 5V and GND at the 'top' of the GPIO are also used by the bonnet
 
-# watercolour paper enclosure
+## watercolour paper enclosure
 
 The box enclosure is made using [this origami video](https://youtu.be/R6TUvYCrdvM) watch this for the step by step box creation instructions
-See the below reference image for watercolour paper size that I used, and dimenstions  
+See the below reference image for watercolour paper size that I used, the first step will be to cut your paper to 7.5'' x 13'' then read notes below and watch origami video
 
  - note the cutout is marked as I neglected to make it big enough when I was originally making this
  - you may want to place your raspberry pi over the paper and visually verify the length of the space from the hdmi port to the power/usb ports
@@ -78,15 +83,15 @@ Reference image for after its all painted and glued and the box is closed
 
 ![enclosure_painted!](/images/enclosure/enclosure_painted.jpg)
 
-# testing wiring and software
+## testing wiring and software
 
 Note: It is generally considered good practice to test your wiring and software *before* you assemble your electronics, typically this involves using a breadboard and the raspberry pi zero with jumper cables. Unfortunately due to the factthat you need to solder to attach the speaker bonnet to the leds/buttons, I'm going to skip complete instructions for brevity and because testing all the parts for this project would add a lot more hassle with soldering. However, I will reccomend that you at least test one of the pushbutton led and button capabilities, to better understand how they work.
 
-## testing wiring
+### testing wiring
 
 For a reference on Raspberry Pi GPIO please see the [official reference here](https://www.raspberrypi.org/documentation/usage/gpio/)
 
-Let's try testing with just one (for example, green) momentary illuminated pushbutton. For each pushbutton, there are 2 sets of contacts, one for the led and one for the button. Per the product page linked above 'There are two contacts for the button and two contacts for the LED, one marked + and one -' and the contacts that are not labeled with + or - are for the button parts. I tested this with alligator clips, but I'm sure you could find another way to test this. I'll walk through testing just the green pushbutton, but you could use the same procedure to test all of them, as long as you're using a valid GPIO pin. Keep in mind I'm using the [BCM scheme](https://pinout.xyz/#) and you can double check your specific BCM mapping using the "pinout" command on the Raspberry Pi terminal.
+Let's try testing with just one (for example, green) momentary illuminated pushbutton. For each pushbutton, there are 2 sets of contacts, one for the led and one for the button. Per the product page linked above 'There are two contacts for the button and two contacts for the LED, one marked + and one -' and the contacts that are not labeled with + or - are for the button parts. I tested this with alligator clips, but I'm sure you could find another way to test this. I'll walk through testing just the green pushbutton, but you could use the same procedure to test all of them, as long as you're using a valid GPIO pin. Keep in mind I'm using the [BCM scheme](https://pinout.xyz/#) and you can double check your specific BCM mapping using the "pinout" command on the Raspberry Pi terminal. Would also reccomend you take a look at the [offiical RPi GPIO documentation for reference](https://www.raspberrypi.org/documentation/usage/gpio/)
 
  - RPi GPIO 5 to + (positive) contact on green momentary pushbutton
  - 220 to 1000 ohm resistor on the - (negative) then connect back to ground pin on RPi
@@ -94,14 +99,22 @@ Let's try testing with just one (for example, green) momentary illuminated pushb
  - RPi ground to the other side of the button contacts 
  - in the diagram, the leads connecting directly to pushbutton are the LED, and the leads going out to the side are for the button part. 
 
-![fritzing_led-button!](/fritzing/led-button.png)
+![fritzing_led-button!](/images/fritzing/led-button.png)
 
-## testing python script 
+Additional referece images show green alligator clip on the positive LED contact and black on the negative -> resistor -> ground, and yellow on going to 25 and blue going to ground.
+
+![alligator_clip_test!](/images/test/alligator_clip_test.jpg)
+
+It works!
+
+![alligator_clip_test_lit!](/images/test/alligator_clip_test_lit.jpg)
+
+### testing python script 
 
 first you should run this command to ensure you have the needed packages 
 
 ```
-sudo apt-get install python-rpi.gpio python3-rpi.gpio
+# sudo apt-get install python-rpi.gpio python3-rpi.gpio
 ```
 
 You can use this script (in the repository as test.py) to test.
@@ -126,7 +139,11 @@ try:
     except:
         GPIO.cleanup()
 ```
+Once you have the script in place on your RPi, make the script executable and run it!
 
-
+```
+# sudo chmod +x test.py
+# python test.py
+```
 
 
