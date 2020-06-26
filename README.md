@@ -100,15 +100,13 @@ Let's try testing with just one (for example, green) momentary illuminated pushb
  - RPi ground to the other side of the button contacts 
  - in the diagram, the leads connecting directly to pushbutton are the LED, and the leads going out to the side are for the button part. 
 
-![fritzing_led-button!](/images/fritzing/led-button.png)
+<img src="/images/fritzing/led-button.png" height="500">
 
 Additional referece images show green alligator clip on the positive LED contact and black on the negative -> resistor -> ground, and yellow on going to 25 and blue going to ground. This is using a Raspberry Pi 4 for testing purposes however this is an identical setup to a Raspberry Pi Zero with male headers. 
 
 <img src="/images/test/alligator_clip_test.jpg" height="500">
 
 It works!
-
-![alligator_clip_test_lit!](/images/test/alligator_clip_test_lit.jpg)
 
 <img src="/images/test/alligator_clip_test_lit.jpg" height="500">
 
