@@ -55,6 +55,7 @@ this guide assumes you already have a raspberry pi zero with raspbian setup and 
 [learning guide - Adafruit Speaker Bonnet for Raspberry Pi](https://learn.adafruit.com/adafruit-speaker-bonnet-for-raspberry-pi/pinouts)
  - note that pins 18, 19, and 21 of the pi are used by the sound bonnet, you cannot use them for any other purpose
  - 3V and 5V and GND at the 'top' of the GPIO are also used by the bonnet
+ - if you are a beginner, I'd follow the guide step by step and get through the testing portion of the pushbutton before you solder this together. If you're experienced and confident in what you're doing, you can go ahead and solder the Bonnet to the Pi Zero
 
 ## watercolour paper enclosure
 
@@ -101,13 +102,15 @@ Let's try testing with just one (for example, green) momentary illuminated pushb
 
 ![fritzing_led-button!](/images/fritzing/led-button.png)
 
-Additional referece images show green alligator clip on the positive LED contact and black on the negative -> resistor -> ground, and yellow on going to 25 and blue going to ground.
+Additional referece images show green alligator clip on the positive LED contact and black on the negative -> resistor -> ground, and yellow on going to 25 and blue going to ground. This is using a Raspberry Pi 4 for testing purposes however this is an identical setup to a Raspberry Pi Zero with male headers. 
 
 ![alligator_clip_test!](/images/test/alligator_clip_test.jpg)
 
 It works!
 
 ![alligator_clip_test_lit!](/images/test/alligator_clip_test_lit.jpg)
+
+<img src="/images/test/alligator_clip_test_lit.jpg" height="150" width="150">
 
 ### testing python script 
 
@@ -145,5 +148,7 @@ Once you have the script in place on your RPi, make the script executable and ru
 # sudo chmod +x test.py
 # python test.py
 ```
+
+If you are not able to get this to work - stop. Re-read relevant documentation. Ensure that you have the wiring done correctly and there is no error thrown when you run the python script. Feel free to submit an issue on the repo for any questions or concerns on these instructions. If this test isn't working, you do not want to proceed to soldering. 
 
 
