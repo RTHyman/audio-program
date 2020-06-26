@@ -35,12 +35,12 @@ Watercolour paper or any other thick stock paper that you can fold around the ho
 [16mm Illuminated Pushbutton - Red Momentary](https://www.adafruit.com/product/1439)  
 [16mm Illuminated Pushbutton - Green Momentary](https://www.adafruit.com/product/1440)   
 [16mm Illuminated Pushbutton - Blue Momentary](https://www.adafruit.com/product/1477)  
-[Double-Side Prototype PCB Board](https://www.amazon.com/Double-Side-Prototype-Universal-Printed-Circuit/dp/B012YZ2Q3W?th=1)
+[Double-Side Prototype PCB Board](https://www.amazon.com/Double-Side-Prototype-Universal-Printed-Circuit/dp/B012YZ2Q3W?th=1)  
 
-Optional:
-[Small Alligator Clip Test Lead (set of 12)](https://www.adafruit.com/product/1008) not required but helpful for testing parts 
-[Anker PowerCore 10000 Portable Charger](https://www.amazon.com/gp/product/B0194WDVHI/ref=oh_aui_detailpage_o07_s00?ie=UTF8&psc=1) if you want to make the project portable, otherwise use official RPi power supply 
-[Solder wick - 3S 5ft.](https://www.adafruit.com/product/149) not required but super helpful for cleaning up any messy soldering or soldering mistakes
+Optional:  
+[Small Alligator Clip Test Lead (set of 12)](https://www.adafruit.com/product/1008) not required but helpful for testing parts   
+[Anker PowerCore 10000 Portable Charger](https://www.amazon.com/gp/product/B0194WDVHI/ref=oh_aui_detailpage_o07_s00?ie=UTF8&psc=1) if you want to make the project portable, otherwise use official RPi power supply  
+[Solder wick - 3S 5ft.](https://www.adafruit.com/product/149) not required but super helpful for cleaning up any messy soldering or soldering mistakes  
 
 You will also need
  - Soldering gun - for example [Weller WLC100 40-Watt Soldering Station](https://www.amazon.com/Weller-WLC100-40-Watt-Soldering-Station/dp/B000AS28UC)
@@ -80,13 +80,13 @@ Once you've gotten the box setup and folded and glued together, there's a few mo
 
 <img src="/images/enclosure/enclosure_inside_tabs.jpg" height="500">
 
-Reference image for after its all painted and glued and the box is closed
+ - Reference image for after its all painted and glued and the box is closed
 
 <img src="/images/enclosure/enclosure_painted.jpg" height="500">
 
 ## testing wiring and software
 
-Note: It is generally considered good practice to test your wiring and software *before* you assemble your electronics, typically this involves using a breadboard and the raspberry pi zero with jumper cables. Unfortunately due to the factthat you need to solder to attach the speaker bonnet to the leds/buttons, I'm going to skip complete instructions for brevity and because testing all the parts for this project would add a lot more hassle with soldering. However, I will reccomend that you at least test one of the pushbutton led and button capabilities, to better understand how they work.
+Note: It is generally considered good practice to test your wiring and software *before* you assemble your electronics, typically this involves using a breadboard and the raspberry pi zero with jumper cables. Unfortunately due to the fact that you need to solder to attach the speaker bonnet to the leds/buttons, I'm going to skip complete instructions for brevity and because testing all the parts for this project would add a lot more hassle with soldering. However, I will reccomend that you at least test one of the pushbutton led and button capabilities, to better understand how they work.
 
 ### testing wiring
 
@@ -159,7 +159,7 @@ General soldering notes
  - if you are not experienced, would advise you review [Adafruit's Guide To Excellent Soldering](https://learn.adafruit.com/adafruit-guide-excellent-soldering) - maybe you can do better than I did! 
  - if you make a mess with solder, use the solder wick to clean it up. You can find resources online on how to properly use solder wick. 
 
-Providing a reference shot of the goal and a fritzing diagram. In this minimal version, I am not screwing down or glueing the Pi down to the enclosure. Some notes:
+Providing a reference shots of the goal and a fritzing diagram. In this minimal version, I am not screwing down or glueing the Pi down to the enclosure. Some notes:
  - before you begin soldering, do a quick double check to ensure that with the pushbuttons, Pi + bonnet + speaker, in the enclosure, you can still open and close the box. This is to check your tab placement and general space.
  - remember, you are soldering near paper, not metal. Be careful. Don't let the soldering gun touch the paper. It will burn. Do not let children solder unsupervised.
  - I would reccomend you focus on relying on your understanding of how the pushbutton works, and the fritzing diagram connections you are making as a guide, rather than trying to copy the image. The wires are a bit hard to see in the image. 
@@ -169,6 +169,9 @@ Providing a reference shot of the goal and a fritzing diagram. In this minimal v
  - even after its all connected, you'll want to have some wiggle room for the Pi to move around a bit inside the enclosure - remember, you want to be able to connect power and other peripherals to the exposed ports. 
  
 ![soldering_reference!](/images/enclosure/soldering_reference.jpg)
+ 
+ - Reference below is just to show that I soldered on the underside of the speaker bonnet and it definitely isn't pretty but its worked solidly and survived for over 2 years! 
 
+![soldering_reference_2!](/images/enclosure/soldering_reference_2.jpg)
 
 
