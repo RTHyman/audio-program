@@ -178,3 +178,6 @@ Providing a reference shots of the goal and a fritzing diagram. In this minimal 
 ![soldering_reference_2!](/images/enclosure/soldering_reference_2.jpg)
 
 ### Connection Details & Diagram
+
+![wiring!](/images/enclosure/wiring.png)
+
