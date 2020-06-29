@@ -155,6 +155,12 @@ Ok, now we will put the parts together in the box. This is going to take a fair 
 
 Either way, just ensure the bonnet will be able to connect and sit as intended. I would not advise attaching the speaker itself until the wiring to the pushbuttons is done. 
 
+### Connection Details & Diagram
+
+See below for more notes and reference images. The connections are made from the pushbuttons to the bonnet. The ground connections just need to go to ground using a 220 to 1000 Ohm resistor - the details are not important. If you want to be extra careful on the wiring or are making any modifications to the code/purpose, you can see the code section to verify what LEDs/buttons are connected to what GPIO pins. I've also marked it in the image here for an easy reference.
+
+![wiring!](/images/enclosure/wiring.png)
+
 ### Soldering Notes
 
 General soldering notes
@@ -177,7 +183,110 @@ Providing a reference shots of the goal and a fritzing diagram. In this minimal 
 
 ![soldering_reference_2!](/images/enclosure/soldering_reference_2.jpg)
 
-### Connection Details & Diagram
+## Code
 
-![wiring!](/images/enclosure/wiring.png)
+### Quick setup instructions
 
+In order to download the code from this repository, you'll need to run:
+
+# git pull https://github.com/theodore-dream/audio-emotion-toy
+
+Then, you will need to move the AudioClips directory to the location referenced in the code
+
+# mv AudioClips /home/pi/Documents/
+
+Make sure the python script is executable
+
+# sudo chmod +x audio-emotion-toy.py 
+ 
+SET CRONJOB
+
+### A brief overview of the code for educational purposes
+
+This first part imports python modules. Most of these are commonly seen in button/led Pi examples, however the use of "sys" is unique here so we can access the audio files. Note the bottom two lines is where I setup GPIO use and set BCM mode BPIO. If you used a different GPIO scheme, you'd need to change it there.
+
+```
+#!/usr/bin/env python
+import os, random
+import sys
+import time
+from time import sleep
+
+import RPi.GPIO as GPIO
+GPIO.setmode(GPIO.BCM)
+```
+
+Here I setup all of the GPIO pins and correspond them to each color and emotion. The top line sets the button and the bottom line sets the GPIO as an output to send power for the LEDs.
+
+```
+GPIO.setup(4, GPIO.IN, pull_up_down=GPIO.PUD_UP) #RED B = ANGER 
+GPIO.setup(17, GPIO.OUT) #RED L = ANGER
+
+GPIO.setup(27, GPIO.IN, pull_up_down=GPIO.PUD_UP) #BLUE B = SADNESS 
+GPIO.setup(22, GPIO.OUT) #BLUE L = SADNESS
+
+GPIO.setup(23, GPIO.IN, pull_up_down=GPIO.PUD_UP) #YELLOW B = JOY 
+GPIO.setup(24, GPIO.OUT) #YELLOW L = JOY 
+
+GPIO.setup(25, GPIO.IN, pull_up_down=GPIO.PUD_UP) #GREEN B = FEAR 
+GPIO.setup(5, GPIO.OUT) #GREEN L = FEAR
+```
+
+Here I create each of the functions. What it does first it specifies the button action. For example, when the red button is pressed [we haven't gotten there yet] the GPIO 17 will be powered for the red LED. Then I specify a random file from the Anger directory, and I make sure to add the entire file path to set the specific filepath for "file" variable to the full filepath, plus the randomfile that I've let python decide for me. Then I use "os.system" to run a command to use mpg123 to run the file. Then wait half a second and power down GPIO 17 to turn the red LED back off. 
+
+```
+def rndanger (): #RED
+	GPIO.output(17, GPIO.HIGH)
+        randomfile = random.choice(os.listdir("/home/pi/Documents/AudioClips/ANGER"))
+        file = '/home/pi/Documents/AudioClips/ANGER/' + randomfile
+        os.system('mpg123 ' + file)
+	sleep(0.5)
+	GPIO.output(17, GPIO.LOW)
+
+def rndsadness (): #BLUE
+	GPIO.output(22, GPIO.HIGH)
+	randomfile = random.choice(os.listdir("/home/pi/Documents/AudioClips/SADNESS/"))
+	file = '/home/pi/Documents/AudioClips/SADNESS/' + randomfile
+	os.system ('mpg123 ' + file)
+        sleep(0.5)
+        GPIO.output(22, GPIO.LOW)
+
+def rndhappiness (): #YELLOW
+	GPIO.output(24, GPIO.HIGH)
+	randomfile = random.choice(os.listdir("/home/pi/Documents/AudioClips/HAPPINESS/"))
+	file = '/home/pi/Documents/AudioClips/HAPPINESS/' + randomfile
+	os.system ('mpg123 ' + file)
+        sleep(0.5)
+        GPIO.output(24, GPIO.LOW)
+
+def rndfear (): #GREEN
+	GPIO.output(5, GPIO.HIGH)
+        randomfile = random.choice(os.listdir("/home/pi/Documents/AudioClips/FEAR/"))
+        file = '/home/pi/Documents/AudioClips/FEAR/' + randomfile
+        os.system ('mpg123 ' + file)
+        sleep(0.5)
+        GPIO.output(5, GPIO.LOW)
+```
+
+We have reached the main loop. The endless while loop, simply states that if the corresponding button press is detected on the button GPIO, to run the respective function that we've set above, to play the clip and light the LED. 
+
+```
+while True:
+	if (GPIO.input(4) == False): #RED/ANGER
+                rndanger ()
+                sleep(0.1)
+
+	if (GPIO.input(27) == False): #BLUE/SADNESS
+		rndsadness ()
+		sleep(0.1)
+
+        if (GPIO.input(23) == False): #YELLOW/HAPPINESS
+                rndhappiness ()
+                sleep(0.1)
+
+	if (GPIO.input(25) == False): #GREEN/FEAR
+		rndfear ()
+		sleep(0.1)
+```
+
+Thank you for reading. 
