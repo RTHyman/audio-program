@@ -188,6 +188,12 @@ In this minimal version, I am not screwing down or glueing the Pi down to the en
 
 ### Quick setup instructions
 
+I'd suggest you make sure you are in the home directory before you proceed to make things simpler
+
+```
+# cd /home/pi/
+```
+
 In order to download the code from this repository, you'll need to run:
 
 ```
@@ -200,10 +206,11 @@ Then, you will need to move the AudioClips directory to the location referenced 
 # mv AudioClips /home/pi/Documents/
 ```
 
-Make sure the python script is executable
+Make sure the python script is executable and go ahead and put it in AudioClips directory
 
 ```
-# sudo chmod +x audio-emotion-toy.py 
+# mv audio-emotion-toy.py /home/pi/Documents/AudioClips/
+# sudo chmod +x /home/pi/Documents/AudioClips/audio-emotion-toy.py 
 ```
 
 Now we'll setup a cronjob on reboot using crontab so that the script will run automatically on reboot
@@ -213,6 +220,12 @@ Now we'll setup a cronjob on reboot using crontab so that the script will run au
 
 [place this line at the bottom and make sure its pointing to the file location where the script is]
 @reboot sleep 10 && sudo python  /home/pi/Documents/AudioClips/audio-emotion-toy.py
+```
+
+Ensure that cron service is enabled
+
+```
+sudo systemctl enable cron
 ```
 
 Then reboot and wait a few moments and try pressing a button! If it works, you're done! 
