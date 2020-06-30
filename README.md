@@ -4,6 +4,9 @@ A guide to create an enclosure for a simple python audio program for Raspberry P
 
 ![enclosure_finished!](/images/enclosure/enclosure_finished.jpg)
 
+* TOC
+{:toc}
+
 ## project goal
 
 The initial goal of the project is to provide a simple project that will teach basics of enclosures, LEDs and buttons, soldering, python, and raspberry pi.  The pros of the approach I've taken is that you can create this project using minimal equipment and watercolour paper, not requiring you to do any woodworking or 3d printing for the enclosure. 
