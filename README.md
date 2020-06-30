@@ -4,8 +4,20 @@ A guide to create an enclosure for a simple python audio program for Raspberry P
 
 ![enclosure_finished!](/images/enclosure/enclosure_finished.jpg)
 
-* TOC
-{:toc}
+   * [audio emotion toy](#audio-emotion-toy)
+      * [project goal](#project-goal)
+      * [parts list](#parts-list)
+         * [bonnet notes](#bonnet-notes)
+      * [enclosure and wiring](#enclosure-and-wiring)
+         * [watercolour paper enclosure](#watercolour-paper-enclosure)
+         * [testing wiring](#testing-wiring)
+         * [testing python script](#testing-python-script)
+      * [Assembly](#assembly)
+         * [Connection Details &amp; Diagram](#connection-details--diagram)
+         * [Soldering Notes](#soldering-notes)
+      * [Code](#code)
+         * [quick setup instructions](#quick-setup-instructions)
+         * [brief overview of the code for educational purposes](#brief-overview-of-the-code-for-educational-purposes)
 
 ## project goal
 
@@ -51,7 +63,7 @@ You will also need
  - Wiring - for example [Stranded-Core Wire Spool - 25ft - 22AWG - Red](https://www.adafruit.com/product/3068)
  - Watercolour paper or other thick stock paper that will provide some durability. Printer paper will not be thick enough for this project. Feel free to get creative in making your enclosure!
 
-## bonnet notes
+### bonnet notes
 
 this guide assumes you already have a raspberry pi zero with raspbian setup and male headers attached - the speaker bonnet uses female headers 
 
@@ -60,7 +72,9 @@ this guide assumes you already have a raspberry pi zero with raspbian setup and 
  - 3V and 5V and GND at the 'top' of the GPIO are also used by the bonnet
  - if you are a beginner, I'd follow the guide step by step and get through the testing portion of the pushbutton before you solder this together. If you're experienced and confident in what you're doing, you can skip the testing wiring section
 
-## watercolour paper enclosure
+## enclosure and wiring
+
+### watercolour paper enclosure
 
 The box enclosure is made using [this origami video](https://youtu.be/R6TUvYCrdvM) watch this for the step by step box creation instructions
 See the below reference image for watercolour paper size that I used, the first step will be to cut your paper to 7.5'' x 13'' then read notes below and watch origami video
@@ -87,11 +101,9 @@ Once you've gotten the box setup and folded and glued together, there's a few mo
 
 <img src="/images/enclosure/enclosure_painted.jpg" height="500">
 
-## testing wiring and software
-
-Note: It is generally considered good practice to test your wiring and software *before* you assemble your electronics, typically this involves using a breadboard and the raspberry pi zero with jumper cables. Unfortunately due to the fact that you need to solder to attach the speaker bonnet to the leds/buttons, I'm going to skip complete instructions for brevity and because testing all the parts for this project would add a lot more hassle with soldering. However, I will reccomend that you at least test one of the pushbutton led and button capabilities, to better understand how they work.
-
 ### testing wiring
+
+To make things simple, we will only be testing a pushbutton directly to the Pi, we will not be testing the speaker bonnet. This is not a necessary step but will help you ensure that at least one of your buttons is working and help you understand how it works. 
 
 For a reference on Raspberry Pi GPIO please see the [official reference here](https://www.raspberrypi.org/documentation/usage/gpio/)
 
@@ -189,7 +201,7 @@ In this minimal version, I am not screwing down or glueing the Pi down to the en
 
 ## Code
 
-### Quick setup instructions
+### quick setup instructions
 
 I'd suggest you make sure you are in the home directory before you proceed to make things simpler
 
@@ -233,7 +245,7 @@ sudo systemctl enable cron
 
 Then reboot and wait a few moments and try pressing a button! If it works, you're done! 
 
-### A brief overview of the code for educational purposes
+### brief overview of the code for educational purposes
 
 This first part imports python modules. Most of these are commonly seen in button/led Pi examples, however the use of "sys" is unique here so we can access the audio files. Note the bottom two lines is where I setup GPIO use and set BCM mode GPIO. If you used a different GPIO scheme, you'd need to change it there.
 
