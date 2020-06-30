@@ -157,7 +157,7 @@ Either way, just ensure the bonnet will be able to connect and sit as intended. 
 
 ### Connection Details & Diagram
 
-See below for more notes and reference images. The connections are made from the pushbuttons to the bonnet. The ground connections just need to go to ground using a 220 to 1000 Ohm resistor - the details are not important. If you want to be extra careful on the wiring or are making any modifications to the code/purpose, you can see the code section to verify what LEDs/buttons are connected to what GPIO pins. I've also marked it in the image here for an easy reference.
+See below for more notes and reference images. The connections are made from the pushbuttons to the bonnet. The ground connections just need to go to ground using a 220 to 1000 Ohm resistor - the details are not important. If you want to be extra careful on the wiring or are making any modifications to the code/purpose, you can see the code section to verify what LEDs/buttons are connected to what GPIO pins. I've also marked it in the image here for an easy reference. The orientation of this image is the same orientation as the images below. Looking at the box with the lid open. 
 
 ![wiring!](/images/enclosure/wiring.png)
 
@@ -167,7 +167,8 @@ General soldering notes
  - if you are not experienced, would advise you review [Adafruit's Guide To Excellent Soldering](https://learn.adafruit.com/adafruit-guide-excellent-soldering) - maybe you can do better than I did! 
  - if you make a mess with solder, use the solder wick to clean it up. You can find resources online on how to properly use solder wick. 
 
-Providing a reference shots of the goal and a fritzing diagram. In this minimal version, I am not screwing down or glueing the Pi down to the enclosure. Some notes:
+In this minimal version, I am not screwing down or glueing the Pi down to the enclosure. Some notes:
+ - I did cut the protoboard to a reasonable size, you can use scissors or utility knife for this
  - before you begin soldering, do a quick double check to ensure that with the pushbuttons, Pi + bonnet + speaker, in the enclosure, you can still open and close the box. This is to check your tab placement and general space.
  - I used tape and some glue to reinforce the holes for the pushbuttons to ensure that the paper won't tear or bend, this will be much easier to do before soldering if you want to reinforce the holes.
  - remember, you are soldering near paper, not metal. Be careful. Don't let the soldering gun touch the paper. It will burn. Do not let children solder unsupervised.
@@ -179,7 +180,7 @@ Providing a reference shots of the goal and a fritzing diagram. In this minimal 
  
 ![soldering_reference!](/images/enclosure/soldering_reference.jpg)
  
- - Reference below is just to show that I soldered on the underside of the speaker bonnet and it definitely isn't pretty but its worked solidly and survived for over 2 years! This is just to give you an idea of how I did it. Rely on the fritzing/notes below for specifics 
+ - Reference below is just to show that I soldered on the underside of the speaker bonnet and it definitely isn't pretty but its worked solidly and survived for over 2 years! This is just to give you an idea of how I did it.  
 
 ![soldering_reference_2!](/images/enclosure/soldering_reference_2.jpg)
 
@@ -189,21 +190,36 @@ Providing a reference shots of the goal and a fritzing diagram. In this minimal 
 
 In order to download the code from this repository, you'll need to run:
 
+```
 # git pull https://github.com/theodore-dream/audio-emotion-toy
+```
 
 Then, you will need to move the AudioClips directory to the location referenced in the code
 
+```
 # mv AudioClips /home/pi/Documents/
+```
 
 Make sure the python script is executable
 
+```
 # sudo chmod +x audio-emotion-toy.py 
- 
-SET CRONJOB
+```
+
+Now we'll setup a cronjob on reboot using crontab so that the script will run automatically on reboot
+
+```
+# sudo crontab -e
+
+[place this line at the bottom and make sure its pointing to the file location where the script is]
+@reboot sleep 10 && sudo python  /home/pi/Documents/AudioClips/audio-emotion-toy.py
+```
+
+Then reboot and wait a few moments and try pressing a button! If it works, you're done! 
 
 ### A brief overview of the code for educational purposes
 
-This first part imports python modules. Most of these are commonly seen in button/led Pi examples, however the use of "sys" is unique here so we can access the audio files. Note the bottom two lines is where I setup GPIO use and set BCM mode BPIO. If you used a different GPIO scheme, you'd need to change it there.
+This first part imports python modules. Most of these are commonly seen in button/led Pi examples, however the use of "sys" is unique here so we can access the audio files. Note the bottom two lines is where I setup GPIO use and set BCM mode GPIO. If you used a different GPIO scheme, you'd need to change it there.
 
 ```
 #!/usr/bin/env python
