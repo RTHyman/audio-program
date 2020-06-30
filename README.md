@@ -8,7 +8,7 @@ A guide to create an enclosure for a simple python audio program for Raspberry P
       * [project goal](#project-goal)
       * [parts list](#parts-list)
          * [bonnet notes](#bonnet-notes)
-      * [enclosure and wiring](#enclosure-and-wiring)
+      * [enclosure and testing wiring](#enclosure-and-testing-wiring)
          * [watercolour paper enclosure](#watercolour-paper-enclosure)
          * [testing wiring](#testing-wiring)
          * [testing python script](#testing-python-script)
@@ -72,7 +72,7 @@ this guide assumes you already have a raspberry pi zero with raspbian setup and 
  - 3V and 5V and GND at the 'top' of the GPIO are also used by the bonnet
  - if you are a beginner, I'd follow the guide step by step and get through the testing portion of the pushbutton before you solder this together. If you're experienced and confident in what you're doing, you can skip the testing wiring section
 
-## enclosure and wiring
+## enclosure and testing wiring
 
 ### watercolour paper enclosure
 
